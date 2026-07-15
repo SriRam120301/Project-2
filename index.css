@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-bg: #F0F4F8;
+  --color-brand-ink: #2D3748;
+  --color-brand-accent: #667EEA;
+  --color-success: #48BB78;
+  --color-warning: #ED8936;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-ink transition-colors duration-300;
+  }
+}
+
+/* Cute slider styling */
+input[type='range'] {
+  @apply h-2 bg-gray-200 rounded-full appearance-none cursor-pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  @apply w-6 h-6 bg-white border-4 border-brand-accent rounded-full appearance-none shadow-md transition-transform hover:scale-110;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-6 h-6 bg-white border-4 border-brand-accent rounded-full appearance-none shadow-md transition-transform hover:scale-110;
+}
+
+.cute-card {
+  @apply bg-white rounded-[2.5rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white;
+}
+
+.cute-button {
+  @apply px-8 py-4 rounded-full font-bold transition-all active:scale-95 shadow-lg;
+}
+
